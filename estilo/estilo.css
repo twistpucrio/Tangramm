@@ -1,0 +1,23 @@
+
+.triangulo{
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 100px solid #384DB5;
+
+
+}
+
+.quadrado {
+    position: absolute;
+    width: 141.42px;
+    height: 141.42px;
+    left: 633px;
+    top: 312.09px;
+
+    background: #FFEA00;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transform: rotate(-45deg);
+}
