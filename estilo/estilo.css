@@ -1,26 +1,57 @@
-/* Fundo com gradiente suave */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #89f7fe, #66a6ff);
-    color: #333;
-    line-height: 1.6;
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url(/img/geometric.png);
+  background-repeat: no-repeat;         /* Não repete */
+  background-size: cover;               /* Cobre toda a tela */
+  background-position: center center;   /* Centraliza a imagem */
+  background-attachment: fixed;         /* Fixa o fundo ao rolar (opcional) */
+  color: #333;
+  line-height: 1.6;
+}
+
+
+.caixa * {
+  margin-top: 0;
+}
+
+.caixa{
+ padding: 20px 30px;
+width: 100%;
+background-color: #ffffff;
+box-shadow: 0px 15px 43px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px 15px 43px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 15px 43px 0px rgba(0,0,0,0.75);
+text-align: center;
 }
 
 /* Título centralizado no meio da página */
 h1 {
     text-align: center;
     font-size: 2.5rem;
-    margin: 40px auto;
-    color: #fff;
+    margin: 20px auto;
+    color: #000000;
     text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
 }
 
 /* Subtítulos */
 h2 {
     margin-top: 15px;
-    color: #444;
+    color: #000000;
+    
+}
+.caixinha{
+ background: #ffffffdd;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    margin-top: 20px;
+    margin-left: 365px;
+    margin-bottom: 20px;
+    max-width: 510px;
+    text-align: center;
+    list-style-type: none;
 }
 
 /* Lista dos controles */
@@ -36,6 +67,7 @@ ul {
 ul li {
     margin: 10px 0;
     font-size: 1.1rem;
+    text-align: justify;
 }
 
 /* Estilo dos blocos de nível */
@@ -56,7 +88,7 @@ ul li {
 /* Barras coloridas na lateral */
 .facil { border-left: 10px solid #4CAF50; }
 .medio { border-left: 10px solid #FFC107; }
-.dificil { border-left: 10px solid #F44336; }
+.dificil { border-left: 10px solid #e41203; }
 
 /* Centralizar o conteúdo */
 body > * {
