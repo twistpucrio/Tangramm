@@ -1,23 +1,65 @@
-
-.triangulo{
-    position: absolute;
-    width: 0; 
-    height: 0; 
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
-    border-bottom: 100px solid #384DB5;
-
-
+/* Fundo com gradiente suave */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    color: #333;
+    line-height: 1.6;
 }
 
-.quadrado {
-    position: absolute;
-    width: 141.42px;
-    height: 141.42px;
-    left: 633px;
-    top: 312.09px;
+/* Título centralizado no meio da página */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 40px auto;
+    color: #fff;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+}
 
-    background: #FFEA00;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    transform: rotate(-45deg);
+/* Subtítulos */
+h2 {
+    margin-top: 15px;
+    color: #444;
+}
+
+/* Lista dos controles */
+ul {
+    background: #ffffffdd;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    list-style-type: none;
+}
+ul li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+/* Estilo dos blocos de nível */
+.nivel {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 25px auto;
+    max-width: 700px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.nivel:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Barras coloridas na lateral */
+.facil { border-left: 10px solid #4CAF50; }
+.medio { border-left: 10px solid #FFC107; }
+.dificil { border-left: 10px solid #F44336; }
+
+/* Centralizar o conteúdo */
+body > * {
+    display: block;
+    text-align: center;
 }
