@@ -2,13 +2,14 @@
     width:35%;
     height:35%;
     text-align: center;
+    padding-left: 40em;
     background-repeat: repeat;
     background-size: auto;
 
 }
 
 
-img:hover {
+/*img:hover {
     transform: scale(1.05); 
     transition: transform 0.1s ease;
     display: flex;
@@ -17,7 +18,7 @@ img:hover {
     text-align: center;  
 
 }
-
+*/
 .centro{
     display: flex;
     justify-content: center; 
