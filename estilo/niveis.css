@@ -1,0 +1,15 @@
+#menu{
+  background-color: gray;  
+  display:flex;
+  align-self: center;
+  font-size: 15pt;
+}
+
+.btn{
+    margin:2em;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+}
