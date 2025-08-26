@@ -1,4 +1,18 @@
 /* Deixa o menu fixo no topo */
+
+
+
+/* Caixa cinza do tangram */
+#canvas {
+  width: 500px;
+  height: 500px;
+  background: #ddd;
+  margin: 60px auto 0 auto; /* sobe a caixa e centraliza */
+  border: 2px solid #bbb;
+  border-radius: 12px;
+}
+
+
 #menu {
   position: fixed;
   top: 0;
