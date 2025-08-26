@@ -1,0 +1,46 @@
+@media (767px <= width <= 1024px){
+    #container{
+        
+    }
+
+    #menu{
+        text-align: center;
+        align-items: center;
+    }
+
+    #button2{
+        text-align: center;
+        font-size: 1.3em ;
+        background-color: pink;
+        margin: 0.5em;
+        white-space: nowrap; /*impede a quebra de linha*/
+        width: auto;
+    }
+
+    h1{
+        font-size: 3em;
+        text-align: center;
+    }
+
+    p{
+    font-size: 1.2em;
+    }
+
+    h2{
+        text-align: center;
+    }
+
+    #caixa1{
+    margin: 3em;
+    padding: 0.8em;
+    text-align: center;
+    border-radius: 2em;
+    background-color: rgb(255, 255, 255);
+    }
+
+    .logo{
+        max-width: 100%;
+        display: block; /*deixa a margin centralizar*/
+        margin:0 auto; /*centraliza horizontalmente*/
+    }
+}
