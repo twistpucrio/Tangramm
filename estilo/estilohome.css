@@ -1,124 +1,103 @@
-#button{
-    height: 50%;
-    width: 15%;           
-    font-size: 28pt;
-    text-align: justify;
-    color: rgb(0, 0, 0);
-    border: 0.1em solid #000000;
-    margin: 0.3em;
-    padding: 0.5em;
-}
-
-#button2 {
-    text-align: center;
-    height: 20%;
-    width: 12%;
-    font-size: 20pt;
-    color: rgb(0, 0, 0);
-    border: 0.22em solid transparent;
-    border-image: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-    border-image-slice: 1;
-    margin: 0.3em;
-    padding: 0.5em;
-    animation: rainbow 3s linear infinite;
+/* ======== FUNDO COM TRIÂNGULOS ======== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
     background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative; /* importante para os triângulos absolutos */
+    overflow-x: hidden;
 }
 
-@keyframes rainbow {
-    0% { border-image-source: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet); }
-    100% { border-image-source: linear-gradient(90deg, violet, indigo, blue, green, yellow, orange, red); }
-}
 
-#container{
-    background-color:rgba(235, 235, 235, 0.904);
-    background-repeat: repeat;
-    background-size: auto;
-    padding: 1em;
-    margin: 1em;
+
+
+/* ======== CONTAINER ======== */
+#container {
     text-align: center;
-    border-radius: 2em;
-    border: 0.22em solid transparent;
-    border-image: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-    border-image-slice: 1;
-    animation: rainbow 3s linear infinite;
+    padding: 2em;
 }
 
-@keyframes rainbow {
-    0% { border-image-source: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet); }
-    100% { border-image-source: linear-gradient(90deg, violet, indigo, blue, green, yellow, orange, red); }
-}
-
-#buttonnivel{
-    height: 50%;
-    width: 50%;           
-    font-size: 20pt;
-    text-align: justify;
-    color: rgb(0, 0, 0);
-    border: 0.1em solid #000000;
-    border-radius: 20em;
-    margin: 0.3em;
-    padding: 0.5em;
-    background-color: rgb(255, 252, 252);
-    transform: scale(1.05); 
-    transition: transform 0.1s ease;
-}
-
-
-button:hover{
-    transform: scale(1.05); 
-    transition: transform 0.1s ease;
-}
-
-h1{
-    font-size: 6em;
-}
-
-#paralelogramo{
-    height: 8%;
-    width: 9%;
-}
-
-p{
-    font-size: 1.6em;
-}
-
-.logo{
-    margin: 80px;
-    padding: 20px;
-    text-align: center;
-}
-
+/* ======== LOGO ======== */
 .logo img {
-    width: 30%;
-    height: 30%;
+    width: 50%;
+    height: auto;
+    margin-top: 80px;   
+    margin-bottom: 40px; 
+    filter: drop-shadow(0px 8px 20px rgba(0,0,0,0.15));
 }
 
+/* ======== TÍTULO ======== */
+h1 {
+    font-size: 3.5em;
+    font-weight: 700;
+    margin-bottom: 1em;
+    color: #111;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* ======== TEXTOS ======== */
+p {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+    color: #333;
+}
+
+/* ======== BOTÕES ======== */
+button, #button2 {
+    font-size: 1.3em;
+    font-weight: 600;
+    padding: 1em 2em;
+    margin: 0.6em;
+    border-radius: 12px;
+    border: none;
+    background: #111;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+}
+
+button:hover, #button2:hover {
+    transform: scale(1.05);
+    background: #ff004c; /* cor vibrante estilo game */
+    box-shadow: 0px 6px 18px rgba(0,0,0,0.3);
+}
+
+/* links dentro dos botões */
+button a, #button2 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ======== CAIXAS ======== */
 #caixa1{
-    margin: 8em;
-    padding: 0.8em;
-    text-align: center;
-    border-radius: 2em;
-    background-color: rgb(255, 255, 255);
-
+    margin: 2em auto;
+    padding: 2em;
+    max-width: 700px;
+    text-align: left;
+    border-radius: 12px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    font-size: 1.1em;
+    line-height: 1.6em;
 }
 
+/**/
 #caixa2{
-    margin: 8em;
-    padding: 0.8em;
-    text-align: center;
-
-}
-
-#caixa3{
-    margin: 8em;
-    padding: 0.8em;
-    text-align: center;
-
-}
-
-#caixa4{
-    margin: 8em;
-    padding: 0.8em;
-    text-align: center;
+    margin: 2em auto;
+    padding: 2em;
+    max-width: 700px;
+    text-align: left;
+    border-radius: 12px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    font-size: 1.1em;
 
 }

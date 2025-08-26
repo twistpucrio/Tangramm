@@ -1,36 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tangram</title>
-    <link rel="shortcut icon" href="img/logot7.png" type="image/png">
-    <link rel="stylesheet" href="estilo/niveis.css">
-    <link rel="stylesheet" href="estilo/estilohome.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tangram</title>
+  
+  <link rel="shortcut icon" href="img/logot7.png" type="image/png">
+  
+  <!-- Estilos -->
+  <link rel="stylesheet" href="estilo/niveis.css">
+  <link rel="stylesheet" href="estilo/estilohome.css">
+  <link rel="stylesheet" href="estilo/style.css">
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+  <script src="script/script.js"></script>
 </head>
 <body>
-    <nav id="menu">
-    <header>
-        <img id="logo" src="img/logot7.png" alt="">
-    </header>
-    <button id="button2"> 
-      <a href="index.html">Início</a>
-    </button>
-    <button id="button2"> 
-      <a href="help.html">Help</a>
-    </button> 
-    <button id="button2">
-      <a href="n1.html">Nível 1</a>
-    </button>
-    <button id="button2">
-      <a href="n2.html">Nível 2</a>
-    </button>
-    <button id="button2">
-      <a href="n3.html">Nível 3</a>
-    </button>
-    <button id="button2">
-      <a href="sobre.html">Sobre o jogo</a>
-    </button>
-    </nav>
+  <!-- ===== MENU FIXO ===== -->
+  <nav id="menu">
+    <img id="logo" src="img/logot7.png" alt="logo T7">
+    <button id="button2"><a href="index.html">Início</a></button>
+    <button id="button2"><a href="help.html">Help</a></button>
+    <button id="button2"><a href="n1.html">Nível 1</a></button>
+    <button id="button2"><a href="n2.html">Nível 2</a></button>
+    <button id="button2"><a href="n3.html">Nível 3</a></button>
+    <button id="button2"><a href="sobre.html">Sobre o jogo</a></button>
+  </nav>
+
+  <!-- ===== CONTEÚDO ===== -->
+  <main id="conteudo">
+    <!-- Bandeja com peças -->
+    <div id="blockTray">
+      <div id="square" class="block"></div>
+      <div id="triangle1" class="block"></div>
+      <div id="triangle2" class="block"></div>
+      <div id="triangle3" class="block"></div>
+      <div id="triangle4" class="block"></div>
+      <div id="triangle5" class="block"></div>
+      <div id="parallelogram" class="block"></div>
+    </div>
+
+    <!-- Canvas do jogo -->
+    <div id="canvas">
+      <div id="instruction">
+        <h2>Tangram</h2>
+        <p>Arraste uma peça aqui para começar a montar.</p>
+        <p>Clique na peça para rotacionar.</p>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
