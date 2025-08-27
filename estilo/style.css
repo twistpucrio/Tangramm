@@ -3,6 +3,10 @@
     position: relative;
 }
 
+:root {
+  --cell: 40px;
+}
+
 #square { 
     width: 110px; 
     height: 110px; 
@@ -40,7 +44,7 @@
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 0 0 150px 150px;
+    border-width: 0 0 160px 160px;
     border-color: transparent transparent #204daf transparent;
     top: -300px;
 }
@@ -55,14 +59,14 @@
 }
 
 #parallelogram {
-    width: 220px;
-    height: 70px;
+    width: 240px;
+    height: 80px;
     background: #ff08ad;
     position: relative;
     top: -600px;
 
     /* Paralelepípedo real, não deformável */
-    clip-path: polygon(31% 0%, 100% 0%, 70% 100%, 0% 100%);
+    clip-path: polygon(35% 0%, 100% 0%, 65% 100%, 0% 100%);
     transform-origin: center center;
 }
 
@@ -98,4 +102,32 @@ html, body {
     background-image: url('http://www.efcollegians.org/wp-content/uploads/2015/05/Wood-Background-Images.jpg');
     background-size: cover;
 }
+
+#board {
+  position: relative;
+   float: left;
+    height: 40%;
+    width: 20%;
+    text-align: center;
+    vertical-align: top;
+    background-color: #ecf0f1;
+    margin: 3%;
+    border-radius: 30px;
+ 
+  background:
+    repeating-linear-gradient(
+      to right,
+      rgba(19, 6, 6, 0.151) 0 1px,
+      transparent 1px var(--cell)
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(19, 6, 6, 0.144) 0 1px,
+      transparent 1px var(--cell)
+    );
+
+  background-color: #eef3f2;
+  border: 2px solid #f5eeee;
+}
+
 
