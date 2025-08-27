@@ -2,9 +2,7 @@ $(document).ready(function () {
     $('.block').draggable({
         containment: 'window',
         stack: '.block',
-        snap: true,
-        snapMode: 'outer',
-        snapTolerance: 13,
+        
     });
 
     $('#blockTray').on('mousedown', function () {
@@ -26,10 +24,7 @@ $(document).ready(function () {
 
         peca.css({
             'transform': transform,
-            '-webkit-transform': transform,
-            '-moz-transform': transform,
-            '-ms-transform': transform,
-            '-o-transform': transform
+           
         });
     }
 
@@ -37,7 +32,7 @@ $(document).ready(function () {
     $('.block').click(function () {
         pecaSelecionada = $(this);
         $('.block').css('box-shadow', 'none');
-        pecaSelecionada.css('box-shadow', '0 0 10px 3px yellow');
+       
 
         let angulo = (pecaSelecionada.data('angle') || 0) + 45;
         angulo %= 360;
@@ -74,3 +69,4 @@ $(document).ready(function () {
         aplicarTransformacoes(pecaSelecionada, angulo, flip);
     });
 });
+
