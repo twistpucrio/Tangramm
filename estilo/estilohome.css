@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at top left, #7B2CBF, #240046);
+    font-family: Arial, sans-serif;
+  }
+  
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .logo img {
+    max-width: 900px;
+    height: auto;
+  }
+
+  .botoes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* 3 colunas */
+  grid-template-rows: repeat(2, 60px);    /* 2 linhas de 60px cada */
+  gap: 20px 40px;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 700px;
+  padding: 0 20px;
+}
+
+.botoes button {
+  width: 100%;
+  background-color: white;
+  color: #240046;   /* mantém o texto roxo */
+  border: 2px solid; /* borda genérica (a cor vem abaixo) */
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  height: 60px;
+}
+
+/* Cores específicas de cada botão */
+.botoes button:nth-child(1) { border-color: red; }
+.botoes button:nth-child(2) { border-color: rgb(255, 209, 2); }
+.botoes button:nth-child(3) { border-color: green; }
+.botoes button:nth-child(4) { border-color: pink; }
+.botoes button:nth-child(5) { border-color: orange; }
+.botoes button:nth-child(6) { border-color: blue; }
+
+/* Hover mantém a cor mas aumenta a espessura */
+.botoes button:hover {
+  border-width: 6px;
+  background-color: #ffffff;
+}
+
