@@ -1,104 +1,67 @@
-/* ======== FUNDO COM TRIÂNGULOS ======== */
-body {
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
     margin: 0;
-    padding: 0;
-    font-family: 'Orbitron', sans-serif;
-    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at top left, #7B2CBF, #240046);
+    font-family: Arial, sans-serif;
+  }
+  
+  .logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    position: relative; /* importante para os triângulos absolutos */
-    overflow-x: hidden;
-}
-
-
-
-
-
-/* ======== CONTAINER ======== */
-#container {
-    text-align: center;
-    padding: 2em;
-}
-
-/* ======== LOGO ======== */
-.logo img {
-    width: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .logo img {
+    max-width: 900px;
     height: auto;
-    margin-top: 80px;   
-    margin-bottom: 40px; 
-    filter: drop-shadow(0px 8px 20px rgba(0,0,0,0.15));
+  }
+
+  .botoes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* 3 colunas */
+  grid-template-rows: repeat(2, 60px);    /* 2 linhas de 60px cada */
+  gap: 20px 40px;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 700px;
+  padding: 0 20px;
 }
 
-/* ======== TÍTULO ======== */
-h1 {
-    font-size: 3.5em;
-    font-weight: 700;
-    margin-bottom: 1em;
-    color: #111;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+.botoes button {
+  width: 100%;
+  background-color: white;
+  color: #240046;   /* mantém o texto roxo */
+  border: 2px solid; /* borda genérica (a cor vem abaixo) */
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  height: 60px;
 }
 
-/* ======== TEXTOS ======== */
-p {
-    font-size: 1.2em;
-    margin-bottom: 2em;
-    color: #333;
+/* Cores específicas de cada botão */
+.botoes button:nth-child(1) { border-color: red; }
+.botoes button:nth-child(2) { border-color: rgb(255, 209, 2); }
+.botoes button:nth-child(3) { border-color: green; }
+.botoes button:nth-child(4) { border-color: pink; }
+.botoes button:nth-child(5) { border-color: orange; }
+.botoes button:nth-child(6) { border-color: blue; }
+
+/* Hover mantém a cor mas aumenta a espessura */
+.botoes button:hover {
+  border-width: 6px;
+  background-color: #ffffff;
 }
 
-/* ======== BOTÕES ======== */
-button, #button2 {
-    font-size: 1.3em;
-    font-weight: 600;
-    padding: 1em 2em;
-    margin: 0.6em;
-    border-radius: 12px;
-    border: none;
-    background: #111;
-    color: #fff;
-    cursor: pointer;
-    transition: all 0.25s ease;
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
-}
-
-button:hover, #button2:hover {
-    transform: scale(1.05);
-    background: #ff004c; /* cor vibrante estilo game */
-    box-shadow: 0px 6px 18px rgba(0,0,0,0.3);
-}
-
-/* links dentro dos botões */
-button a, #button2 a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* ======== CAIXAS ======== */
-#caixa1{
-    margin: 2em auto;
-    padding: 2em;
-    max-width: 700px;
-    text-align: left;
-    border-radius: 12px;
-    background-color: #fff;
-    border: 1px solid #eee;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    font-size: 1.1em;
-    line-height: 1.6em;
-}
-
-/**/
-#caixa2{
-    margin: 2em auto;
-    padding: 2em;
-    max-width: 700px;
-    text-align: left;
-    border-radius: 12px;
-    background-color: #fff;
-    border: 1px solid #eee;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    font-size: 1.1em;
-
-}

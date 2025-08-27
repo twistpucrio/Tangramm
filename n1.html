@@ -1,57 +1,71 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tangram</title>
-  
-  <link rel="shortcut icon" href="img/logot7.png" type="image/png">
-  
-  <!-- Estilos -->
-  <link rel="stylesheet" href="estilo/niveis.css">
-  <link rel="stylesheet" href="estilo/estilohome.css">
-  <link rel="stylesheet" href="estilo/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tangram</title>
+    <link rel="shortcut icon" href="img/logot7.png" type="image/png">
+    <link rel="stylesheet" href="estilo/niveis.css">
+    <link rel="stylesheet" href="estilo/estilohome.css">
+    <link rel="stylesheet" href="estilo/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script src="script/script.js"></script>
 
-  <!-- Scripts -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
-  <script src="script/script.js"></script>
 </head>
 <body>
-  <!-- ===== MENU FIXO ===== -->
-  <nav id="menu">
-    <img id="logo" src="img/logot7.png" alt="logo T7">
-    <button id="button2"><a href="index.html">Início</a></button>
-    <button id="button2"><a href="help.html">Help</a></button>
-    <button id="button2"><a href="n1.html">Nível 1</a></button>
-    <button id="button2"><a href="n2.html">Nível 2</a></button>
-    <button id="button2"><a href="n3.html">Nível 3</a></button>
-    <button id="button2"><a href="sobre.html">Sobre o jogo</a></button>
-  </nav>
+    <nav id="menu">
+    <header>
+        <img id="logo" src="img/logot7.png" alt="">
+    </header>
+    <button id="button2"> 
+      <a href="index.html">Início</a>
+    </button>
+    <button id="button2"> 
+      <a href="help.html">Help</a>
+    </button> 
+    <button id="button2">
+      <a href="n1.html">Nível 1</a>
+    </button>
+    <button id="button2">
+      <a href="n2.html">Nível 2</a>
+    </button>
+    <button id="button2">
+      <a href="n3.html">Nível 3</a>
+    </button>
+    <button id="button2">
+      <a href="sobre.html">Sobre o jogo</a>
+    </button>
+    </nav>
+    <br/><br/>
 
-  <!-- ===== CONTEÚDO ===== -->
-  <main id="conteudo">
-    <h1>Jogo de Tangram</h1>
-
-    <!-- Bandeja com peças -->
-    <div id="blockTray">
-      <div id="square" class="block"></div>
-      <div id="triangle1" class="block"></div>
-      <div id="triangle2" class="block"></div>
-      <div id="triangle3" class="block"></div>
-      <div id="triangle4" class="block"></div>
-      <div id="triangle5" class="block"></div>
-      <div id="parallelogram" class="block"></div>
+    <div class="centralizador"> 
+    <p id="textoTimer">Tempo restante:</p>
+    <div id="timer"></div>
     </div>
 
-    <!-- Canvas do jogo -->
-    <div id="canvas">
-      <div id="instruction">
-        <h2>Tangram</h2>
-        <p>Arraste uma peça aqui para começar a montar.</p>
-        <p>Clique na peça para rotacionar.</p>
-      </div>
+    <br/><br/><br/><br/>
+    <div id="container-imagem">
+      <img src="img/tangranorig.png" alt="Exemplo de Imagem" id="imagem-tangram">
     </div>
-  </main>
+    
+    <script src="script/nivelfacil.js"></script>
+
+    <div id="blockTray" class="hidden">
+        <div id="square" class="block"></div>
+        <div id="triangle1" class="block"></div>
+        <div id="triangle2" class="block"></div>
+        <div id="triangle3" class="block"></div>
+        <div id="triangle4" class="block"></div>
+        <div id="triangle5" class="block"></div>
+        <div id="parallelogram" class="block"></div>
+    </div>
+    <div id="canvas" class="hidden">
+        <div id="instruction">
+            <h1>T7</h1>
+            <p>Bom jogo!</p>
+        </div>
+    </div>
+    
 </body>
 </html>
