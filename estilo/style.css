@@ -1,104 +1,57 @@
-/*blocks*/
-.block{
-    position:relative;
-}
-
-#square { 
-    width: 110px; 
-    height: 100px; 
-    background: #16a085; 
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-#triangle1 { 
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 80px 80px 80px;
-    border-color: transparent transparent #f1c40f transparent; 
-}
-
-#triangle2 { 
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 150px 0 150px 150px;
-    border-color: transparent transparent    transparent #e74c3c;
-    top:-100px;
-}
-
-#triangle3 {
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 150px 150px 0 150px;
-    border-color: #007bff transparent transparent transparent;
-    top:-100px;
-}
-
-#triangle4 { 
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 0 150px 150px;
-    border-color: transparent transparent #d63294 transparent;
-    top:-300px;
-}
-
-#triangle5 {
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 80px 80px 80px 0;
-    border-color: transparent #69dcf0 transparent transparent;
-    top: -350px;
-}
-
-#parallelogram {
-	width: 150px;
-	height: 70px;
-	-webkit-transform: skew(-45deg);
-	   -moz-transform: skew(-45deg);
-	     -o-transform: skew(-45deg);
-	background: #e67e22;
-    top:-600px;
-}
-
-/*Page layout*/
-#blockTray {
-	float: left;
-	height: 100%;
-	width: 20%;
-    padding:5px;
-}
-
-#canvas {
-	float: left;
-	height: 90%;
-	width: 70%;
-	text-align: center;
-	vertical-align: top;
-    background-color: #ecf0f1;
-    margin:3%;
-    border-radius: 30px;
-}
-
-#instruction {
-	margin-top: 150px; 
-	font-size: 24px;
-	color: #bdc3c7;
-}
-
-html, body {
-    height:100%;
-    width:100%;
-    background-image: url('http://www.efcollegians.org/wp-content/uploads/2015/05/Wood-Background-Images.jpg');
-  background-size: cover;
-}
-
-
-
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at top left, #7B2CBF, #240046);
+    font-family: Arial, sans-serif;
+  }
+  
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .logo img {
+    max-width: 900px;
+    height: auto;
+  }
+  
+  .botoes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* 3 colunas */
+    grid-template-rows: repeat(2, 60px);    /* 2 linhas de 60px cada */
+    gap: 20px 40px;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 700px;
+    padding: 0 20px;
+  }
+  
+  .botoes button {
+    width: 100%;
+    background-color: white;
+    color: #240046;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    height: 60px;
+  }
+  
+  .botoes button:hover {
+    background-color: #eee;
+  }
+  
