@@ -2,6 +2,8 @@ $(document).ready(function () {
     $('.block').draggable({
         containment: 'window',
         stack: '.block',
+        snap: true,
+        snapTolerance: 5,
         
     });
 
@@ -69,4 +71,3 @@ $(document).ready(function () {
         aplicarTransformacoes(pecaSelecionada, angulo, flip);
     });
 });
-
