@@ -3,95 +3,122 @@ body, html {
   padding: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-image: url(/img/vibrant.png);
-  background-repeat: no-repeat;         /* Não repete */
-  background-size: cover;               /* Cobre toda a tela */
-  background-position: center center;   /* Centraliza a imagem */
-  background-attachment: fixed;         /* Fixa o fundo ao rolar (opcional) */
-  color: #333;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background: radial-gradient(circle at top left, #7B2CBF, #240046);
   line-height: 1.6;
 }
 
-
-.caixa * {
-  margin-top: 0;
+/* Caixa principal com título e botões */
+.caixa {
+  padding: 20px 30px;
+  width: 100%;
+  max-width: 3000px;
+  background-color: #ffffff;
+  box-shadow: 0px 15px 43px 0px rgba(0,0,0,0.75);
+  margin: 20px auto;
+  border-radius: 12px;
 }
 
-.caixa{
- padding: 20px 30px;
-width: 100%;
-background-color: #ffffff;
-box-shadow: 0px 15px 43px 0px rgba(0,0,0,0.75);
--webkit-box-shadow: 0px 15px 43px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 15px 43px 0px rgba(0,0,0,0.75);
-text-align: center;
+.caixa .topo {
+  display: flex;
+  justify-content: space-between; /* título à esquerda, botões à direita */
+  align-items: center;
+  flex-wrap: wrap; /* quebra se for tela pequena */
+  gap: 15px;
 }
 
-/* Título centralizado no meio da página */
+/* Título */
 h1 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin: 20px auto;
-    color: #000000;
-    text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  font-size: 2rem;
+  margin: 0;
+  color: #000000;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  text-align: center; /* Centraliza o título */
 }
 
-/* Subtítulos */
-h2 {
-    margin-top: 15px;
-    color: #000000;
-    
-}
-.caixinha{
- background: #ffffffdd;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    margin-top: 20px;
-    margin-left: 365px;
-    margin-bottom: 20px;
-    max-width: 510px;
-    text-align: center;
-    list-style-type: none;
+/* Estilo dos botões */
+.botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center; /* Botões também centralizados */
 }
 
-/* Lista dos controles */
+.botoes button {
+  background-color: white;
+  color: #240046;
+  border: 2px solid;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  height: 50px;
+}
+
+/* cores individuais */
+.botoes button:nth-child(1) { border-color: red; }
+.botoes button:nth-child(2) { border-color: rgb(255, 209, 2); }
+.botoes button:nth-child(3) { border-color: green; }
+.botoes button:nth-child(4) { border-color: pink; }
+.botoes button:nth-child(5) { border-color: orange; }
+.botoes button:nth-child(6) { border-color: blue; }
+
+.botoes button:hover {
+  border-width: 4px;
+}
+
+/* Caixas de conteúdo abaixo */
+.caixinha, ul, .nivel {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  margin: 20px auto;
+  max-width: 700px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* lista */
 ul {
-    background: #ffffffdd;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    max-width: 700px;
-    margin: 0 auto 30px auto;
-    list-style-type: none;
-}
-ul li {
-    margin: 10px 0;
-    font-size: 1.1rem;
-    text-align: justify;
+  list-style-type: none;
+  padding: 20px;
+  text-align: justify; /* Justifica o texto */
 }
 
-/* Estilo dos blocos de nível */
+ul li {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* níveis */
 .nivel {
-    background: #fff;
-    border-radius: 12px;
-    padding: 20px;
-    margin: 25px auto;
-    max-width: 700px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .nivel:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-/* Barras coloridas na lateral */
 .facil { border-left: 10px solid #4CAF50; }
 .medio { border-left: 10px solid #FFC107; }
 .dificil { border-left: 10px solid #e41203; }
 
-/* Centralizar o conteúdo */
-body > * {
-    display: block;
-    text-align: center;
+header.caixa {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 20px 30px;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0px 15px 43px 0px rgba(0,0,0,0.75);
+
+  /* tira arredondado e espaçamento */
+  margin: 0;            
+  border-radius: 0;      
 }
