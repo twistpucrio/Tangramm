@@ -1,4 +1,4 @@
-// script2.js — valida vitória/derrota, com botão Debug
+
 (function ($) {
   $(function () {
     console.log('[script2] carregado');
@@ -14,18 +14,17 @@
       triangle4: 180, triangle5: 180, parallelogram: 180
     };
 
-    // >>> AJUSTE para sua solução final <<<
+    
     const target = {
-      square:        { cell: { x: 6, y: 4 }, angle: 0,  },
-      triangle1:     { cell: { x: 4, y: 5 }, angle: 0,   },
-      triangle2:     { cell: { x: 2, y: 4 }, angle: 0,   },
-      triangle3:     { cell: { x: 4, y: 2 }, angle: 0,   },
-      triangle4:     { cell: { x: 6, y: 6 }, angle: 0,   },
-      triangle5:     { cell: { x: 7, y: 2 }, angle: 0,   },
-      parallelogram: { cell: { x: 3, y: 7 }, angle: 180,   flip: false }
+      square:        { cell: { x: 7, y: 10 }, angle: 90,  },
+      triangle1:     { cell: { x: 12, y: 11 }, angle: 225,   },
+      triangle2:     { cell: { x: 13, y: 7 }, angle: 315,   },
+      triangle3:     { cell: { x: 7, y: 7 }, angle: 45,   },
+      triangle4:     { cell: { x: 3, y: 6 }, angle: 225, flip: false  },
+      triangle5:     { cell: { x: 15, y: 4 }, angle: 45,   },
+      parallelogram: { cell: { x: 4, y: 3 }, angle: 135,   flip: true }
     };
 
-    // ===== FUNÇÕES (declaradas ANTES de usar) =====
     function getBoardInnerRect() {
       const el = document.getElementById('board');
       const r = el.getBoundingClientRect();
