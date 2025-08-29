@@ -103,31 +103,6 @@ html, body {
     background-size: cover;
 }
 
-#board {
-  position: relative;
-   float: left;
-    height: 320px;
-    width: 320px;
-    text-align: center;
-    vertical-align: top;
-    background-color: #ecf0f1;
-    margin: 3%;
-    border-radius: 0px;
- 
-  background:
-    repeating-linear-gradient(
-      to right,
-      rgba(19, 6, 6, 0.151) 0 1px,
-      transparent 1px var(--cell)
-    ),
-    repeating-linear-gradient(
-      to bottom,
-      rgba(19, 6, 6, 0.144) 0 1px,
-      transparent 1px var(--cell)
-    );
 
-  background-color: #eef3f2;
-  border: 2px solid #f5eeee;
-}
 
 
