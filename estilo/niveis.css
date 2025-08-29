@@ -48,4 +48,19 @@ img{
   left: 45%;
 }
 
-  
+#painelVitoria {
+    /* Oculta o painel, mas mantém o espaço */
+    visibility: hidden; 
+
+    /* Estilos para centralizar e destacar */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f0f0f0;
+    padding: 30px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}

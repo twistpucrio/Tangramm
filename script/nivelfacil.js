@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   setTimeout(() => {
     const div1 = document.getElementById('blockTray');
-    const div2 = document.getElementById('canvas');
+    const div2 = document.getElementById('board');
     const div3 = document.getElementById('mostrador');
 
     if (div1) {

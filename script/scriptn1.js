@@ -186,3 +186,64 @@
     })();
   });
 })(jQuery);
+
+
+document.addEventListener('DOMContentLoaded', (event) => {
+
+    const divTimer = document.getElementById('timer');
+    let tempoRestante = 60;
+
+    setTimeout(() => {
+        divTimer.textContent = tempoRestante;
+        const timerPrincipal = setInterval(() => {
+            tempoRestante--;
+            divTimer.textContent = tempoRestante;
+    
+            if (tempoRestante <= 0) {
+                clearInterval(timerPrincipal); 
+                divTimer.textContent = "Tempo esgotado!";
+                divTimer.style.backgroundColor = '#ff6257ff';
+            }
+        }, 1000); 
+        
+    }, 6000); 
+});
+
+
+function paraTimer() {
+  let checkWin = true; 
+  
+  if (checkWin) {
+    clearTimeout(timer); 
+  }
+  
+  return false;
+}
+
+const painelVitoria = document.getElementById("painelVitoria");
+const btnRefazer = document.getElementById("btnRefazer");
+const btnProximoNivel = document.getElementById("btnProximoNivel");
+
+// Adiciona os eventos de clique aos botões
+btnRefazer.addEventListener('click', function() {
+    console.log("Reiniciando o nível...");
+    painelVitoria.style.visibility = 'hidden'; // Oculta o painel
+});
+
+btnProximoNivel.addEventListener('click', function() {
+    console.log("Carregando o próximo nível...");
+    painelVitoria.style.visibility = 'hidden'; // Oculta o painel
+});
+
+// Sua função de verificação
+function checkWin() {
+    let venceu = true; 
+    
+    if (venceu) {
+        // Torna a div de vitória visível
+        painelVitoria.style.visibility = 'visible';
+        return true;
+    }
+    
+    return false;
+}

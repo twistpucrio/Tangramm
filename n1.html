@@ -13,6 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
     <script src="script/script.js"></script>
 
+
 </head>
 <body>
     <nav id="menu">
@@ -41,8 +42,8 @@
     <br/><br/>
 
     <div class="centralizador"> 
-    <p id="textoTimer">Tempo restante:</p>
-    <div id="timer"></div>
+      <p id="textoTimer">Tempo restante:</p>
+      <br/><div id="timer"></div>
     </div>
 
     <br/><br/><br/><br/>
@@ -51,6 +52,8 @@
     </div>
     
     <script src="script/nivelfacil.js"></script>
+    <script src="script/scriptn1.js"></script>
+
 
     <div id="blockTray" class="hidden">
         <div id="square" class="block"></div>
@@ -61,12 +64,17 @@
         <div id="triangle5" class="block"></div>
         <div id="parallelogram" class="block"></div>
     </div>
-    <div id="canvas" class="hidden">
-        <div id="instruction">
-            <h1>T7</h1>
-            <p>Bom jogo!</p>
-        </div>
-    </div>
+
+    <div id="board"  class="hidden"></div>
     
+    <div id="painelVitoria">
+    <h2>Parabéns! Você venceu!</h2>
+    <p>Escolha sua próxima ação:</p>
+    <button id="btnRefazer">Refazer</button>
+    <button id="btnProximoNivel">Próximo Nível</button>
+    </div>
+
+
+
 </body>
 </html>
