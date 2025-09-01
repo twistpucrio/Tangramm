@@ -12,6 +12,8 @@
     height: 112px; 
     background: #fdf900; 
     transform: rotate(45deg);
+    top: 100px;
+    left: 100px;
 }
 
 #triangle1 { 
@@ -20,6 +22,8 @@
     border-style: solid;
     border-width: 0 80px 80px 80px;
     border-color: transparent transparent #0c6310 transparent; 
+    top: 100px;
+    left: 20px;
 }
 
 #triangle2 { 
@@ -28,7 +32,7 @@
     border-style: solid;
     border-width: 160px 0 160px 160px;
     border-color: transparent transparent transparent #fa6d1c;
-    top: -100px;
+    top: -300px;
 }
 
 #triangle3 {
@@ -37,7 +41,7 @@
     border-style: solid;
     border-width: 160px 160px 0 160px;
     border-color: #ff0000 transparent transparent transparent;
-    top: -100px;
+    top: -50px;
 }
 
 #triangle4 { 
@@ -46,7 +50,8 @@
     border-style: solid;
     border-width: 0 0 160px 160px;
     border-color: transparent transparent #204daf transparent;
-    top: -300px;
+    top: -550px;
+    left: 200px;
 }
 
 #triangle5 {
@@ -55,7 +60,8 @@
     border-style: solid;
     border-width: 80px 80px 80px 0;
     border-color: transparent #62e941 transparent transparent;
-    top: -350px;
+    top: -850px;
+    left: 200px;
 }
 
 #parallelogram {
@@ -63,7 +69,7 @@
     height: 80px;
     background: #ff08ad;
     position: relative;
-    top: -600px;
+    top: -670px;
 
     /* Paralelepípedo real, não deformável */
     clip-path: polygon(33% 0%, 100% 0%, 67% 100%, 0% 100%);
@@ -103,31 +109,6 @@ html, body {
     background-size: cover;
 }
 
-#board {
-  position: relative;
-   float: left;
-    height: 320px;
-    width: 320px;
-    text-align: center;
-    vertical-align: top;
-    background-color: #ecf0f1;
-    margin: 3%;
-    border-radius: 0px;
- 
-  background:
-    repeating-linear-gradient(
-      to right,
-      rgba(19, 6, 6, 0.151) 0 1px,
-      transparent 1px var(--cell)
-    ),
-    repeating-linear-gradient(
-      to bottom,
-      rgba(19, 6, 6, 0.144) 0 1px,
-      transparent 1px var(--cell)
-    );
 
-  background-color: #eef3f2;
-  border: 2px solid #f5eeee;
-}
 
 
