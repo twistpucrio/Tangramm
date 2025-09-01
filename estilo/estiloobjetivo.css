@@ -1,0 +1,177 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Menu fixo no topo */
+  #menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #7B2CBF; /* Cor de fundo roxa */
+    display: flex;
+    align-items: center;
+    padding: 0.8em 2em; /* Aumenta o padding do menu */
+    z-index: 1000;
+    gap: 1em;
+    height: 70px;
+  }
+  
+  #menu .logo img {
+    height: 60px; /* Diminui a altura da logo */
+    width: auto;
+  }
+  
+  #menu nav {
+    display: flex;
+    gap: 1em;
+  }
+  
+  #menu .btn {
+    background-color: white;
+    color: #240046;
+    padding: 0.8em 1.6em; /* Aumenta o padding dos botões */
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px; /* Aumenta a altura dos botões */
+    user-select: none;
+  }
+  
+  /* Cores das bordas individuais */
+  #menu .btn:nth-of-type(2) { border-color: red; }
+  #menu .btn:nth-of-type(3) { border-color: rgb(255, 209, 2); }
+  #menu .btn:nth-of-type(4) { border-color: green; }
+  #menu .btn:nth-of-type(5) { border-color: pink; }
+  #menu .btn:nth-of-type(6) { border-color: orange; }
+  #menu .btn:nth-of-type(7) { border-color: blue; }
+  
+  #menu .btn:hover {
+    border-width: 4px;
+    background-color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Conteúdo principal */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: white; /* Fundo branco */
+    color: #240046; /* Cor do texto */
+    padding: 120px 20px 40px; /* Ajuste o padding superior para acomodar o menu fixo */
+    min-height: 100vh;
+  }
+  
+  #container {
+    max-width: 1200px; /* Aumenta a largura máxima do container */
+    width: 95%;
+    background-color: rgba(36, 0, 70, 0.9); /* Fundo da área de conteúdo em roxo escuro */
+    border-radius: 12px;
+    padding: 50px 70px; /* Aumenta o padding do container */
+    box-shadow: 0 0 25px rgba(123, 44, 191, 0.8);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 3.5rem; /* Aumenta o tamanho da fonte do título */
+    color: #BFA3FF;
+    text-shadow: 1px 1px 3px #240046;
+  }
+  
+  h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 2rem;
+    color: #E1C9F9;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  b {
+    color: #D8BFD8;
+  }
+  
+  /* Estilos para a caixa de conteúdo roxa e texto */
+  #caixa1, #caixa2 {
+    background-color: transparent;  /* Remover fundo roxo */
+    padding: 0;  /* Remover o padding extra */
+    margin-bottom: 30px;  /* Manter margem entre os blocos */
+    box-shadow: none;  /* Remover sombra */
+    border: none;  /* Remover borda */
+  }
+  
+  /* Ajuste do texto sem caixa */
+  #caixa1 h2, #caixa2 p {
+    margin-bottom: 20px;
+    font-size: 1.3rem;  /* Aumentar o tamanho do texto */
+    line-height: 1.6;  /* Melhor espaçamento entre as linhas */
+    color: #E1C9F9;  /* Cor suave lilás */
+  }
+  
+  /* Texto normal dentro do #caixa1 */
+  #caixa1 p {
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: #D8BFD8;  /* Cor lilás claro para o texto */
+  }
+  
+  /* Texto centralizado dentro do #caixa2 */
+  #caixa2 p {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #C7B9FF;
+    text-align: center;
+  }
+  
+  /* Ajuste para o espaçamento do texto */
+  h1, h2, p {
+    margin-bottom: 15px;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 700px) {
+    #menu {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+    }
+  
+    #menu .logo img {
+      height: 60px;
+    }
+  
+    #menu nav {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #menu .btn {
+      width: 100%;
+      padding: 16px 0;
+      font-size: 1.3rem;
+      margin: 10px 0;
+    }
+  
+    #container {
+      padding: 30px 20px;
+    }
+  
+    h1 {
+      font-size: 2.8rem;
+    }
+  }
+  

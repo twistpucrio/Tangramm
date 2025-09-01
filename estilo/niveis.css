@@ -1,51 +1,118 @@
-#menu{
-  background-color:rgba(235, 235, 235, 0.904); 
-  display:flex;
-  align-self: center;
-  font-size: 15pt;
+/* Menu fixo no topo */
+#menu {
+  position: fixed;       /* Fixa o menu no topo da página */
+  top: 0;
+  left: 0;
+  width: 100vw;          /* Ocupa toda a largura da viewport */
+  background: radial-gradient(circle at top left, #7B2CBF, #240046);
+  display: flex;         /* Organiza itens em linha */
+  align-items: center;   /* Centraliza os itens verticalmente */
+  padding: 0.5em 2em;    /* Espaçamento interno */
+  box-sizing: border-box;
+  z-index: 1000;         /* Fica acima de outros elementos */
+  height: 70px;          /* Define a altura do menu */
+  gap: 1em;
 }
 
-.btn{
-    margin:2em;
+/* Logo alinhado à esquerda */
+#menu header {
+  margin-right: 2em;
+  flex-shrink: 0;
 }
 
-img{
-    width: 100px;
-    height: 100px;
+#menu header img {
+  height: 100px;
+  width: auto;
+}
+
+/* Botões dentro do menu */
+#menu .btn {
+  background-color: white;
+  color: #240046;
+  padding: 0.6em 1.2em;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  user-select: none;
+}
+
+/* Cores das bordas dos botões */
+#menu .btn:nth-of-type(2) { border-color: red; }
+#menu .btn:nth-of-type(3) { border-color: rgb(255, 209, 2); }
+#menu .btn:nth-of-type(4) { border-color: green; }
+#menu .btn:nth-of-type(5) { border-color: pink; }
+#menu .btn:nth-of-type(6) { border-color: orange; }
+#menu .btn:nth-of-type(7) { border-color: blue; }
+
+/* Hover nos botões */
+#menu .btn:hover {
+  border-width: 4px;
+  background-color: #fff;
+  text-decoration: none;
+}
+
+/* Estilo do corpo da página */
+body {
+  margin: 0;
+  padding-top: 70px; /* Espaço suficiente para o menu fixo */
+  min-height: 100vh;
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* Contêiner do conteúdo da página */
+#content {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+/* Estilo da imagem */
+img {
+  width: 300px;
+  height: 300px;
 }
 
 #container-imagem {
-    text-align: center;
+  text-align: center;
 }
 
 #imagem-tangram {
-    height: 40%;
-    width: 40%;
+  height: 40%;
+  width: 40%;
 }
 
+/* Classe para esconder elementos */
 .escondida {
-    display: none;
+  display: none;
 }
 
 .hidden {
   display: none;
 }
 
-#textoTimer{
+/* Estilo para o timer */
+#textoTimer {
   display: inline-block;
   font-size: 25pt;
 }
 
-#timer{
+#timer {
   display: inline-block;
   font-size: 25pt;
 }
 
+/* Centralizador de elementos */
 .centralizador {
-  text-align: center; 
+  text-align: center;
   position: absolute;
   top: 12%;
   left: 45%;
 }
-
-  

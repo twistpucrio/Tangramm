@@ -1,53 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Tangram </title>
-       <link rel="stylesheet" href="estilo/base.css">
-        <link rel="stylesheet" href="estilo/estilohome.css">
-    <link rel="shortcut icon" href="img/logot7.png" type="image/png">
-    <script src="trianguloscair.js">  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tangram - Página Inicial</title>
+  <!-- Links para os arquivos CSS -->
+  <link rel="stylesheet" href="estilo/estiloobjetivo.css">  <!-- Estilos principais da página -->
+  <link rel="stylesheet" href="estilo/niveis.css">         <!-- Estilos específicos dos níveis -->
+  <link rel="stylesheet" href="estilo/menu.css">            <!-- Estilos do menu -->
+  <link rel="shortcut icon" href="img/logot7.png" type="image/png">
 </head>
- <body>
+<body>
+  <!-- Menu fixo no topo -->
+  <div id="menu">
+    <header class="logo">
+      <img src="img/logonova.png" alt="Logo">
+    </header>
+    <nav>
+      <a href="index.html" class="btn">Home</a>
+    </nav>
+  </div>
 
-<div id="container">
-  <header class="logo">
-    <img  src="img/logonova.png" alt="logo"/>
-  </header>
-  <br/> <br/>
-        <button id="button2"> 
-          <a href="help.html">Help</a>
-        </button> 
-        <button id="button2">
-          <a href="n1.html">Nível Facil</a>
-        </button>
-        <button id="button2">
-          <a href="n2.html">Nível Medio</a>
-        </button>
-        <button id="button2">
-          <a href="n3.html">Nível Dificil</a>
-        </button>
-        <button id="button2">
-          <a href="sobre.html">Sobre o jogo</a>
-        </button>
-        <h1>BEM-VINDOS AO T7!</h1>
-        <p>O T7 é um jogo online que desafia sua <b>memória visual</b>, seu <b> raciocínio espacial</b>, sua <b>agilidade</b> e sua <b>noção geométrica</b>.</p> 
-        <div id="caixa1">  
-            <h2>Objetivo</h2>
-            <p>O objetivo é simples: você deve recriar uma figura usando as sete peças Tangram, o mais rápido possível, após visualizá-la por um tempo curto.
-            <br/>Em cada rodada, uma figura-alvo é exibida na tela por exatos <b>5 segundos</b>. Sua missão é memorizar a posição de cada uma das sete peças 
-            que a compõem. <br/> Assim que a figura desaparece, um temporizador é ativado, e você deve usar o Tangram disponível para recriar a imagem no
-            menor tempo possível. <br/>Quanto mais rápido você concluir o objetivo, maior a sua pontuação, mas se o tempo acabar, você perde. <br/> O tempo é o seu maior adversário e também a medida do seu sucesso!</p>
-            </div>
-          
-        <div id="caixa2">
-            <p> Começe a jogar :)</p>
-        </div>
-        <button id="button"> Nível Fácil </button> 
-        <button id="button"> Nível Médio </button> 
-        <button id="button"> Nível Difícil </button> 
-        </div>
-    </body>
-</div>
+  <!-- Conteúdo principal da página -->
+  <div id="container">
+    <h1>BEM-VINDOS AO T7!</h1>
+    <p>O T7 é um jogo online que desafia sua <b>memória visual</b>, seu <b>raciocínio espacial</b>, sua <b>agilidade</b> e sua <b>noção geométrica</b>.</p>
+    
+    <div id="caixa1">
+      <h2>Objetivo</h2>
+      <p>O objetivo é simples: você deve recriar uma figura usando as sete peças Tangram, o mais rápido possível, após visualizá-la por um tempo curto.</p>
+    </div>
+    
+    <div id="caixa2">
+      <p>Comece a jogar :)</p>
+    </div>
+  </div>
+</body>
 </html>
