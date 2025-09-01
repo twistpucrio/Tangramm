@@ -1,7 +1,9 @@
+let controleVitoria = false;
 
 (function ($) {
   $(function () {
     console.log('[script2] carregado');
+  
 
     // ===== CONFIG =====
     const CELL = parseInt(getComputedStyle(document.documentElement)
@@ -94,9 +96,11 @@
       });
     }
 
-    function ganhou() {
-      alert('🎉 Você ganhou!');
-    }
+    const divGanhou = document.getElementById('ganhou');
+
+    function verificarEExibir() {
+      divGanhou.classList.add('visivel');
+  }
 
     function checkWin() {
       // atualiza células de todas as peças
@@ -124,7 +128,9 @@
         if (used.has(key)) return false;
         used.set(key, id);
       }
-      ganhou();
+    
+    verificarEExibir();
+      controleVitoria = true;
       return true;
     }
 
@@ -185,3 +191,58 @@
     })();
   });
 })(jQuery);
+
+const containerImagem = document.getElementById('imagem-dog');
+
+setTimeout(() => {
+    containerImagem.classList.add('escondida');
+}, 5000);
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  const tempoEspera = 6000; 
+
+  setTimeout(() => {
+    const div1 = document.getElementById('blockTray');
+    const div2 = document.getElementById('board');
+    const div3 = document.getElementById('mostrador');
+
+    if (div1) {
+      div1.classList.remove('hidden');
+    }
+    if (div2) {
+      div2.classList.remove('hidden');
+    }
+    if (div2) {
+      div3.classList.remove('hidden');
+    }
+    
+  }, tempoEspera);
+});
+
+document.addEventListener('DOMContentLoaded', (event) => {
+
+    const divTimer = document.getElementById('timer');
+    let tempoRestante = 60;
+
+    setTimeout(() => {
+        divTimer.textContent = tempoRestante;
+        const timerPrincipal = setInterval(() => {
+            tempoRestante--;
+            divTimer.textContent = tempoRestante;
+    
+            if (tempoRestante <= 0) {
+                clearInterval(timerPrincipal); 
+                divTimer.textContent = "Tempo esgotado!";
+                divTimer.style.backgroundColor = '#ff6257ff';
+            }
+           if (controleVitoria){
+               clearInterval(timerPrincipal); 
+                divTimer.textContent = ":)";
+                divTimer.style.backgroundColor = '#ffffffff';
+                
+            }
+                
+        }, 1000); 
+        
+    }, 6000); 
+});

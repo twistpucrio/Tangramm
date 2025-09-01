@@ -13,7 +13,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
     <script src="script/script.js"></script>
-    <script src="script/scriptnivel2.js"></script>
 
 </head>
 <body>
@@ -44,15 +43,16 @@
 
     <div class="centralizador"> 
     <p id="textoTimer">Tempo restante:</p>
-    <div id="timer"></div>
+    <br/><div id="timer"></div>
     </div>
 
     <br/><br/><br/><br/>
     <div id="container-imagem">
-      <img src="img/Screenshot 2025-08-29 163859.png" alt="Exemplo de Imagem" id="imagem-tangram">
+      <img src="img/Screenshot 2025-08-29 163859.png" alt="Exemplo de Imagem" id="imagem-dog">
     </div>
     
-    <script src="script/nivelfacil.js"></script>
+    <script src="script/scriptn2.js"></script>
+
 
     <div id="blockTray" class="hidden">
         <div id="square" class="block"></div>
@@ -63,7 +63,10 @@
         <div id="triangle5" class="block"></div>
         <div id="parallelogram" class="block"></div>
     </div>
-    <div id="board"></div>
-    
-</body>
+    <div id="board" class="hidden"> </div>
+
+    <div id="ganhou" class="hidden">
+        <p>Parabéns, você ganhou o jogo!</p>
+    </div>
+  </body>
 </html>

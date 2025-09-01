@@ -8,11 +8,12 @@
     
     <link rel="stylesheet" href="estilo/style.css">
     <link rel="stylesheet" href="estilo/niveis.css">
-    <link rel="stylesheet" href="estilo/stylenivel1.css">
+    <link rel="stylesheet" href="estilo/stylen1.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
     <script src="script/script.js"></script>
+
 
 </head>
 <body>
@@ -43,7 +44,7 @@
 
     <div class="centralizador"> 
     <p id="textoTimer">Tempo restante:</p>
-    <div id="timer"></div>
+    <br/><div id="timer"></div>
     </div>
 
     <br/><br/><br/><br/>
@@ -51,7 +52,9 @@
       <img src="img/tangranorig.png" alt="Exemplo de Imagem" id="imagem-tangram">
     </div>
     
-    <script src="script/nivelfacil.js"></script>
+    <script src="script/scriptn1.js"></script>
+
+
 
     <div id="blockTray" class="hidden">
         <div id="square" class="block"></div>
@@ -62,12 +65,10 @@
         <div id="triangle5" class="block"></div>
         <div id="parallelogram" class="block"></div>
     </div>
-    <div id="canvas" class="hidden">
-        <div id="instruction">
-            <h1>T7</h1>
-            <p>Bom jogo!</p>
-        </div>
+
+    <div id="board" class="hidden"> </div>
+    <div id="ganhou" class="hidden">
+        <p>Parabéns, você ganhou o jogo!</p>
     </div>
-    
 </body>
 </html>
