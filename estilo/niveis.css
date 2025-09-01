@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   width: 100vw;          /* Ocupa toda a largura da viewport */
-  background: radial-gradient(circle at top left, #7B2CBF, #240046);
+   background-color: #240046; /* Roxo escuro */
   display: flex;         /* Organiza itens em linha */
   align-items: center;   /* Centraliza os itens verticalmente */
   padding: 0.5em 2em;    /* Espaçamento interno */
@@ -29,7 +29,8 @@
 #menu .btn {
   background-color: white;
   color: #240046;
-  padding: 0.6em 1.2em;
+  padding: 0.6em 2.5em;  /* aumenta espaço lateral */
+  min-width: 120px;      /* largura mínima dos botões */
   border-radius: 8px;
   font-weight: bold;
   font-size: 16px;
@@ -45,12 +46,11 @@
 }
 
 /* Cores das bordas dos botões */
-#menu .btn:nth-of-type(2) { border-color: red; }
-#menu .btn:nth-of-type(3) { border-color: rgb(255, 209, 2); }
-#menu .btn:nth-of-type(4) { border-color: green; }
-#menu .btn:nth-of-type(5) { border-color: pink; }
-#menu .btn:nth-of-type(6) { border-color: orange; }
-#menu .btn:nth-of-type(7) { border-color: blue; }
+/* Cores das bordas dos botões */
+#menu .btn:nth-of-type(1) { border-color: rgb(255, 123, 0);}
+#menu .btn:nth-of-type(2) { border-color: rgb(255, 209, 2); }
+
+
 
 /* Hover nos botões */
 #menu .btn:hover {
