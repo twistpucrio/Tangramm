@@ -26,7 +26,7 @@
 }
 
 /* Botões dentro do menu */
-#menu .btn {
+.btn {
   background-color: white;
   color: #240046;
   padding: 0.6em 2.5em;  /* aumenta espaço lateral */
