@@ -1,73 +1,85 @@
 /* Reset geral */
 body, html {
+  height: 100%;
   margin: 0;
   padding: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-image: url(/img/vibrant.png);
-  background-repeat: no-repeat;
+  background: 
+    radial-gradient(circle at top left, #7B2CBF, #240046),
+    url(/img/vibrant.png) no-repeat center center fixed;
   background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-  background: radial-gradient(circle at top left, #7B2CBF, #240046);
   line-height: 1.6;
+}
+
+header{
+  height: 50px;
 }
 
 /* MENU FIXO ROXO */
 #menu {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 1000;
+  left: 0;
+  right: 0;
   width: 100%;
   background-color: #240046; /* Roxo escuro */
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Agora tudo vai pro lado esquerdo */
-  padding: 10px 30px;
-  gap: 20px; /* espaço entre logo e botões */
-  box-shadow: 0px 8px 20px rgba(0,0,0,0.5);
+  justify-content: flex-start; /* agora tudo vai para a esquerda */
+  gap: 1.5em;
+  padding: 15px 30px;
+  z-index: 1000;
+  border-bottom: 3px solid #240046;
 }
 
 /* LOGO */
 #menu .logo img {
-  height: 100px;
-  width: auto;
+  width: 120px;
+  height: auto;
 }
-
-.botoes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.botoes button {
+.button2 {
   background-color: white;
   color: #240046;
   border: 2px solid;
-  padding: 12px 20px;
+  border-radius: 8px;
+  padding: 12px 16px;
   font-size: 16px;
   font-weight: bold;
-  border-radius: 8px;
   cursor: pointer;
   transition: 0.3s ease;
   height: 50px;
+  min-width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* cores individuais */
-.botoes button:nth-child(1) { border-color: rgb(255, 123, 0); }
-
-.botoes button:hover {
-  border-width: 4px;
-  transform: scale(1.05);
+.button2:hover {
+  border-width: 6px;
+  background-color: #ffffff;
 }
+
+/* Links dentro dos botões */
+.button2 a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* Bordas coloridas (opcional) */
+#menu button:nth-child(2) { border-color: rgb(255, 123, 0);} 
+
 
 /* TÍTULO */
 h1 {
-  font-size: 2rem;
-  margin: 30px auto 10px auto;
+  font-size: 3rem;
+  margin: 100px auto 10px auto; /* 30px topo, 10px base */
   color: #ffffff;
   text-align: center;
   text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
 }
+
 
 /* Caixas de conteúdo */
 .caixinha, ul, .nivel {
@@ -93,15 +105,22 @@ ul li {
   line-height: 1.5;
 }
 
-/* Blocos de níveis */
+/* Níveis com cores laterais */
 .nivel {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.nivel:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  position: relative;
+  padding-left: 20px; /* espaço pra barra lateral */
+  text-align: left;
 }
 
-.facil { border-left: 10px solid #4CAF50; }
-.medio { border-left: 10px solid #FFC107; }
-.dificil { border-left: 10px solid #e41203; }
+/* Barra lateral colorida */
+.nivel.facil {
+  border-left: 8px solid green; /* verde */
+}
+
+.nivel.medio {
+  border-left: 8px solid orange; /* laranja/amarelo */
+}
+
+.nivel.dificil {
+  border-left: 8px solid red; /* vermelho */
+}
