@@ -1,0 +1,105 @@
+@media (max-width: 768px){
+    /*Página Inicial*/
+    .botoes-topo button {
+        width: 100px;           
+        padding: 4px 1px;
+        font-size: 12px;
+        height: 40px;
+        margin:0.1em;
+    }  
+    
+    .central {
+        flex: 1;                        /* ocupa o espaço vertical disponível */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;         /* centraliza verticalmente */
+        align-items: center;             /* centraliza horizontalmente */
+        width: 100%;
+    }
+
+    .logo {
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: center;   
+        align-items: center;
+        width: 100%;
+    }
+
+    .logo img {
+        max-width: 7850px;
+        margin: 0 auto;
+    }
+
+    .botoes button {
+        width: 80%;
+        max-width: 200px;          
+        padding: 20px 24px;
+        font-size: 20px;
+        height: 70px;
+    }
+
+    /*Sobre*/
+    h2 {
+        font-size: 20pt;
+        margin-top: 40px;
+    }
+
+    h3 {
+        font-size: 20pt;
+        margin: 0;
+    }
+
+    h5 {
+        font-size: 25pt;
+        margin: 0.1em;
+    }
+
+    #div {
+        justify-content: center;
+        width: 100%;
+        padding: 5px;
+        display:grid;
+        gap:0.5em;
+    }
+
+    .pessoa {
+        padding: 10px;
+        font-size: 18px;
+        min-height: 10px;
+        width: 100%;   
+        height: 100%;  
+        margin-left:0em;
+        margin-right: 0em;
+        place-items:center;  
+        display: flex;                     /* Flexbox ativado */
+        flex-direction: column;           /* Conteúdo em coluna */
+        align-items: center;              /* Centraliza na horizontal */
+        justify-content: center;          /* Centraliza na vertical */
+        text-align: center;         
+    }
+
+    /*Help*/
+    .caixinha{
+        padding: 1px;
+    }
+    ul {
+        padding: 1px;
+    }
+    ul li {
+        margin: 10px;
+    }
+    li{
+        margin: 10px;
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+    .facil{
+        padding: 1px;
+    }
+    .medio{
+        padding: 1px;
+    }
+    .dificil{
+        padding: 1px;
+    }
+}
