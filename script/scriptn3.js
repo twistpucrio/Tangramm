@@ -101,8 +101,9 @@
 
 
     function verificarEExibir() {
-      divGanhou.classList.add('visivel');
-    }
+      if (tempoRestante >= 0){
+      divGanhou.classList.add('visivel');}
+  }
   
 
     function checkWin() {
