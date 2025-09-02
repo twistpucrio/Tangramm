@@ -116,3 +116,12 @@ img {
   top: 12%;
   left: 45%;
 }
+
+a img {
+  width: 40px;
+  height: 40px;
+}
+
+#botaoreiniciar {
+  max-width: 60px;
+}
