@@ -1,4 +1,19 @@
-  let controleVitoria = false;
+let score = 0;
+let controleVitoria = false;
+
+
+const savedScore = localStorage.getItem('gameScore');
+
+if (savedScore !== null) {
+  score = parseInt(savedScore, 10);
+}
+
+function updateScoreDisplay() {
+  const scoreElement = document.getElementById('score-display');
+  if (scoreElement) {
+    scoreElement.innerText = score;
+  }
+}
 
 (function ($) {
   $(function () {
@@ -97,13 +112,17 @@
 
 
     
+ 
     const divGanhou = document.getElementById('ganhou');
-
 
     function verificarEExibir() {
       divGanhou.classList.add('visivel');
-    }
-  
+  }
+
+    function handleVictory() {
+        score += 100;
+        localStorage.setItem('gameScore', score.toString());
+        updateScoreDisplay(); }
 
     function checkWin() {
       // atualiza células de todas as peças
@@ -131,9 +150,9 @@
         if (used.has(key)) return false;
         used.set(key, id);
       }
-    
-      verificarEExibir();
       controleVitoria = true;
+      verificarEExibir();
+      handleVictory()
       return true;
     }
 
@@ -208,6 +227,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const div1 = document.getElementById('blockTray');
     const div2 = document.getElementById('board');
     const div3 = document.getElementById('mostrador');
+    const div4 = document.getElementById('score-container');
+    const div5 = document.getElementById('score-display');
 
     if (div1) {
       div1.classList.remove('hidden');
@@ -215,10 +236,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
     if (div2) {
       div2.classList.remove('hidden');
     }
-    if (div2) {
+    if (div3) {
       div3.classList.remove('hidden');
     }
-    
+      if (div4) {
+      div4.classList.remove('hidden');
+    }
+    if (div5) {
+      div5.classList.remove('hidden');
+    }
   }, tempoEspera);
 });
 

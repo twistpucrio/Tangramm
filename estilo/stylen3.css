@@ -33,8 +33,9 @@
 }
 
 .hidden {
-  display: none;
+  visibility: hidden;
 }
+
 
 #textoTimer{
   display: inline-block;
@@ -71,7 +72,7 @@
   top: 50%;
   left: 50%;
   height: 8%;
-  width:18%;
+  width:22%;
   transform: translate(-50%, -50%);
   z-index: 1000; 
   padding: 20px;
@@ -84,4 +85,27 @@
 
 #ganhou.visivel {
   display: block;
+  visibility: visible;
 }
+
+
+#score-container {
+  border: 2px solid #333;
+  position: relative;
+  left: 30%;
+  border-radius: 10px;
+  padding: 10px 20px;
+  display: inline-block;
+  width: 5em;
+  background-color: #240046;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  font-size: 16pt;
+  color: rgb(255, 255, 255);
+   }
+
+ #score-display {
+  font-size: 2.8em;
+  font-weight: bold;
+  color: #4CAF50;
+  text-align: center;
+ }
