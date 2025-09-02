@@ -71,3 +71,4 @@ $(document).ready(function () {
         aplicarTransformacoes(pecaSelecionada, angulo, flip);
     });
 });
+
