@@ -102,7 +102,8 @@ let score = 0;
     const divGanhou = document.getElementById('ganhou');
 
     function verificarEExibir() {
-      divGanhou.classList.add('visivel');
+      if (tempoRestante >= 0){
+      divGanhou.classList.add('visivel');}
   }
 
   function updateScoreDisplay() {
@@ -155,15 +156,14 @@ let score = 0;
   
 }
 
-    // ===== INICIALIZA defaults (evita undefined) =====
+   
     $('.block').each(function () {
       const $p = $(this);
       if ($p.data('angle') == null) $p.data('angle', 0);
       if ($p.attr('id') === 'parallelogram' && $p.data('flip') == null) $p.data('flip', false);
     });
 
-    // ===== EVENTOS (após funções) =====
-    // drop da peça
+    
     $(document).on('dragstop', '.block', function () {
       updatePieceCell($(this));
       dumpEstado();
@@ -176,7 +176,6 @@ let score = 0;
       setTimeout(() => { updatePieceCell($p); dumpEstado(); checkWin(); }, 0);
     });
 
-    // após girar/flipar por teclado
     $(document).on('keydown', function (e) {
       if (e.key === 'ArrowLeft' || e.key === 'ArrowRight' ||
           e.key === 'ArrowUp'   || e.key === 'ArrowDown') {
@@ -184,18 +183,9 @@ let score = 0;
       }
     });
 
-    // botão de debug
-    const btn = document.createElement('button');
-    btn.textContent = '🧪 Debug';
-    Object.assign(btn.style, {
-      position: 'fixed', right: '16px', bottom: '16px',
-      padding: '8px 12px', borderRadius: '8px',
-      border: '1px solid #999', background: '#fff', cursor: 'pointer', zIndex: 99999
-    });
-    btn.onclick = dumpEstado;
-    document.body.appendChild(btn);
+   
 
-    // sanity: confere se target cabe no board
+    
     (function validateTargetFitsBoard() {
       const br = getBoardInnerRect();
       const maxX = Math.floor(br.width / CELL);
@@ -264,7 +254,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 divTimer.textContent = "Tempo esgotado!";
                 divTimer.style.backgroundColor = '#ff6257ff';
             }
-           if (controleVitoria){
+           if (controleVitoria && (tempoRestante >= 0)){
                clearInterval(timerPrincipal); 
                 divTimer.textContent = ":)";
                 divTimer.style.backgroundColor = '#ffffffff';

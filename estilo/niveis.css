@@ -26,7 +26,7 @@
 }
 
 /* Botões dentro do menu */
-#menu .btn {
+.btn {
   background-color: white;
   color: #240046;
   padding: 0.6em 2.5em;  /* aumenta espaço lateral */
@@ -115,4 +115,13 @@ img {
   position: absolute;
   top: 12%;
   left: 45%;
+}
+
+a img {
+  width: 40px;
+  height: 40px;
+}
+
+#botaoreiniciar {
+  max-width: 60px;
 }

@@ -38,12 +38,12 @@ body, html {
 }
 
 /* Botões do menu */
-.botoes {
+.button {
   display: flex;
   gap: 10px;
 }
 
-.botoes button {
+button {
   background-color: white;
   color: #240046;
   padding: 0.6em 2.5em;
@@ -56,14 +56,18 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40px;
+  height: 50px;
   transition: all 0.3s ease;
 }
 
-.botoes button:hover {
+button:hover {
   border-width: 4px;
   transform: scale(1.05);
 }
+
+button:nth-child(1) { border-color: rgb(255, 123, 0);}
+
+
 
 /* Caixa principal do conteúdo */
 /* Caixa principal do conteúdo */
@@ -122,10 +126,6 @@ ul li {
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-.facil { border-left: 10px solid #4CAF50; }
-.medio { border-left: 10px solid #FFC107; }
-.dificil { border-left: 10px solid #e41203; }
-
 /* Títulos gerais da página */
 .caixa-conteudo h1 {
   font-size: 4rem;
@@ -134,7 +134,7 @@ ul li {
   margin-bottom: 15px;
 }
 .caixa-conteudo p {
-  font-size: 3rem;
+  font-size: 2rem;
   color: #000000;
   margin-top: 20px;
   margin-bottom: 15px;
@@ -142,14 +142,10 @@ ul li {
 
 .caixa-conteudo h2 {
   font-size: 4rem;
-  color: #240046;
+  color: #ff3030;
   margin-top: 20px;
   margin-bottom: 15px;
 }
-
-
-
-
 
 /* Rodapé */
 footer {

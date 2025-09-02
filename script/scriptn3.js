@@ -123,6 +123,10 @@ function updateScoreDisplay() {
         score += 100;
         localStorage.setItem('gameScore', score.toString());
         updateScoreDisplay(); }
+      if (tempoRestante >= 0){
+      divGanhou.classList.add('visivel');}
+  }
+  
 
     function checkWin() {
       // atualiza células de todas as peças
@@ -156,28 +160,26 @@ function updateScoreDisplay() {
       return true;
     }
 
-    // ===== INICIALIZA defaults (evita undefined) =====
+    
     $('.block').each(function () {
       const $p = $(this);
       if ($p.data('angle') == null) $p.data('angle', 0);
       if ($p.attr('id') === 'parallelogram' && $p.data('flip') == null) $p.data('flip', false);
     });
 
-    // ===== EVENTOS (após funções) =====
-    // drop da peça
     $(document).on('dragstop', '.block', function () {
       updatePieceCell($(this));
       dumpEstado();
       checkWin();
     });
 
-    // após girar por clique
+  
     $(document).on('click', '.block', function () {
       const $p = $(this);
       setTimeout(() => { updatePieceCell($p); dumpEstado(); checkWin(); }, 0);
     });
 
-    // após girar/flipar por teclado
+   
     $(document).on('keydown', function (e) {
       if (e.key === 'ArrowLeft' || e.key === 'ArrowRight' ||
           e.key === 'ArrowUp'   || e.key === 'ArrowDown') {
@@ -185,18 +187,9 @@ function updateScoreDisplay() {
       }
     });
 
-    // botão de debug
-    const btn = document.createElement('button');
-    btn.textContent = '🧪 Debug';
-    Object.assign(btn.style, {
-      position: 'fixed', right: '16px', bottom: '16px',
-      padding: '8px 12px', borderRadius: '8px',
-      border: '1px solid #999', background: '#fff', cursor: 'pointer', zIndex: 99999
-    });
-    btn.onclick = dumpEstado;
-    document.body.appendChild(btn);
+    
 
-    // sanity: confere se target cabe no board
+   
     (function validateTargetFitsBoard() {
       const br = getBoardInnerRect();
       const maxX = Math.floor(br.width / CELL);

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tangram</title>
     <link rel="shortcut icon" href="img/logot7.png" type="image/png">
+    <link rel="stylesheet" href="estilo/responsividade.css">
     
     <link rel="stylesheet" href="estilo/style.css">
     <link rel="stylesheet" href="estilo/niveis.css">
@@ -15,19 +16,30 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
     <script src="script/script.js"></script>
 
-
 </head>
 <body>
     <nav id="menu">
     <header>
-        <img id="logo" src="img/logot7.png" alt="">
+        <img id="logo" src="img/logonovab.png" alt="logo">
     </header>
-    <a href="index.html" class="btn">HOME</a>
-    <a href="help.html" class="btn">HELP</a>
-    <a href="n3.html" class="btn">NÍVEL 3</a>
+
+
+    <button id="btn"> 
+      <a href="index.html">Início</a>
+    </button>
+    <button id="btn">
+      <a href="n3.html">Nível 3</a>
+    </button>
+    <button id="btn">
+      <a id="btn"  onclick="location.reload()"><img src="img/restart.png" ></a>
+    </button>
+  <button id="btn">
+      <a href="help.html">Help</a>
+    </button>
+   
+
     </nav>
     <br/><br/>
-
     <div class="centralizador"> 
     <p id="textoTimer">Tempo restante:</p>
     <br/><div id="timer"></div>
