@@ -1,6 +1,6 @@
 let controleVitoria = false;
 let score = 0;
-
+let isTimeUp = false;
 
 (function ($) {
   $(function () {
@@ -102,8 +102,7 @@ let score = 0;
     const divGanhou = document.getElementById('ganhou');
 
     function verificarEExibir() {
-      if (tempoRestante >= 0){
-      divGanhou.classList.add('visivel');}
+      divGanhou.classList.add('visivel');
   }
 
   function updateScoreDisplay() {
@@ -123,12 +122,17 @@ let score = 0;
 }
 
   
-    function checkWin() {
-      // atualiza células de todas as peças
-      $('.block').each(function () { updatePieceCell($(this)); });
+   function checkWin() {
+    // Add this check at the beginning
+    if (isTimeUp) {
+        return false;
+    }
 
-      const used = new Map();
-      for (const id in target) {
+    // The rest of your checkWin logic follows here...
+    $('.block').each(function () { updatePieceCell($(this)); });
+
+    const used = new Map();
+    for (const id in target) {
         const $p = $('#' + id);
         if ($p.length === 0) return false;
 
@@ -142,20 +146,19 @@ let score = 0;
         if (!rotationMatches(angle, goal.angle, id)) return false;
 
         if (id === 'parallelogram' && goal.flip !== null) {
-          if ((!!flip) !== goal.flip) return false;
+            if ((!!flip) !== goal.flip) return false;
         }
 
         const key = cell.x + ',' + cell.y;
         if (used.has(key)) return false;
         used.set(key, id);
-      }
+    }
         controleVitoria = true;
         verificarEExibir();
         handleVictory();
         return true;
-  
-}
 
+}
    
     $('.block').each(function () {
       const $p = $(this);
@@ -238,8 +241,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }, tempoEspera);
 });
 
-document.addEventListener('DOMContentLoaded', (event) => {
 
+  document.addEventListener('DOMContentLoaded', (event) => {
     const divTimer = document.getElementById('timer');
     let tempoRestante = 60;
 
@@ -248,24 +251,21 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const timerPrincipal = setInterval(() => {
             tempoRestante--;
             divTimer.textContent = tempoRestante;
-    
+
             if (tempoRestante <= 0) {
                 clearInterval(timerPrincipal); 
                 divTimer.textContent = "Tempo esgotado!";
                 divTimer.style.backgroundColor = '#ff6257ff';
+                isTimeUp = true; // Set this to true when time runs out
             }
            if (controleVitoria && (tempoRestante >= 0)){
                clearInterval(timerPrincipal); 
                 divTimer.textContent = ":)";
                 divTimer.style.backgroundColor = '#ffffffff';
-                
+
             }
-                
+
         }, 1000); 
-        
+
     }, 6000); 
 });
-
-
-
-  
