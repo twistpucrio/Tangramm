@@ -4,12 +4,16 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
   background: 
-    radial-gradient(circle at top left, #7B2CBF, #240046),
-    url(/img/vibrant.png) no-repeat center center fixed;
-  background-size: cover;
+    radial-gradient(circle at top left, #7B2CBF, #240046) fixed,
+    url(/img/vibrant.png) no-repeat center center;
+  background-size: cover, cover;
+
   line-height: 1.6;
 }
+
+
 
 header{
   height: 50px;
