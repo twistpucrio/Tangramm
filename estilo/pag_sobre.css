@@ -79,7 +79,7 @@ h5 {
   margin: 0.5em;
 }
 
-/* Container dos participantes */
+
 #div {
   display: grid;
   grid-template-columns: repeat(2, 1fr); 
@@ -122,4 +122,20 @@ h5 {
 [href*='https://github.com'] {
   color: black;
   margin: 3px;
+}
+
+.divsobre {
+  justify-content: center;
+  align-items: center;
+  width: 1000px;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+#textosobre {
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  font-size: 20px;
 }
