@@ -80,9 +80,9 @@
 /* Page layout */
 #blockTray {
     float: left;
-    height: 100%;
+    height: 75%;
     width: 20%;
-    padding: 5px;
+    padding: 10px;
 }
 
 #canvas {
@@ -103,7 +103,7 @@
 }
 
 html, body {
-    height: 100%;
+    height: 70%;
     width: 100%;
     background-image: url('http://www.efcollegians.org/wp-content/uploads/2015/05/Wood-Background-Images.jpg');
     background-size: cover;

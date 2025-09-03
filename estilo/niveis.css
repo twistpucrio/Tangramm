@@ -96,7 +96,7 @@
 body {
   margin: 0;
   padding-top: 70px; /* Espaço suficiente para o menu fixo */
-  min-height: 100vh;
+  min-height: 80vh;
   background-color: #fff;
   font-family: Arial, sans-serif;
 }

@@ -61,8 +61,8 @@ body, html {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   padding: 50px;                           /* aumenta o espaço interno */
   max-width: 700px;                        /* aumenta a largura */
-  min-height: 600px;                        /* define altura mínima */
-  margin: 120px auto 40px auto;            /* centralizado e afastado do menu */
+  min-height: 100px;                        /* define altura mínima */
+  margin: 40px auto;            /* centralizado e afastado do menu */
   text-align: left;
   line-height: 1.8;
   color: #240046;
@@ -76,7 +76,7 @@ body, html {
 .caixa-conteudo h2, 
 .caixa-conteudo h3 {
   color: #240046;
-  margin-top: 20px;
+  margin-top: 5px;
   margin-bottom: 15px;
 }
 
@@ -114,20 +114,20 @@ ul li {
 .caixa-conteudo h1 {
   font-size: 4rem;
   color: #240046;
-  margin-top: 20px;
+  margin-top: 5px;
   margin-bottom: 15px;
 }
 .caixa-conteudo p {
   font-size: 2rem;
   color: #000000;
-  margin-top: 20px;
+  margin-top: 5px;
   margin-bottom: 15px;
 }
 
 .caixa-conteudo h2 {
   font-size: 4rem;
   color: #ff3030;
-  margin-top: 20px;
+  margin-top: 5px;
   margin-bottom: 15px;
 }
 
