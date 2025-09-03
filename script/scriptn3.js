@@ -1,5 +1,6 @@
 let score = 0;
 let controleVitoria = false;
+let isTimeUp = false;
 
 
 const savedScore = localStorage.getItem('gameScore');
@@ -109,27 +110,35 @@ function updateScoreDisplay() {
         maxX, maxY
       });
     }
-
-
-    
- 
+   
     const divGanhou = document.getElementById('ganhou');
 
     function verificarEExibir() {
       divGanhou.classList.add('visivel');
   }
 
-    function handleVictory() {
-        score += 100;
-        localStorage.setItem('gameScore', score.toString());
-        updateScoreDisplay(); }
-      if (tempoRestante >= 0){
-      divGanhou.classList.add('visivel');}
-  }
-  
+  function updateScoreDisplay() {
+    const scoreElement = document.getElementById('score-display');
+    
+    if (scoreElement) {
+        scoreElement.innerText = score;
+    }
+}
 
+
+    function handleVictory() {
+          score += 100;
+          localStorage.setItem('gameScore', score.toString());
+          updateScoreDisplay(); 
+    
+}
     function checkWin() {
-      // atualiza células de todas as peças
+      // Adicione esta verificação no início
+      if (isTimeUp) {
+        return false;
+      }
+      
+      // O restante da lógica de verificação de vitória segue aqui...
       $('.block').each(function () { updatePieceCell($(this)); });
 
       const used = new Map();
@@ -256,6 +265,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 clearInterval(timerPrincipal); 
                 divTimer.textContent = "Tempo esgotado!";
                 divTimer.style.backgroundColor = '#ff6257ff';
+                isTimeUp = true; // Defina como true quando o tempo acabar
             }
            if (controleVitoria){
                clearInterval(timerPrincipal); 

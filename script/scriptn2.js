@@ -1,6 +1,6 @@
 let score = 0;
 let controleVitoria = false;
-
+let isTimeUp = false;
 
 const savedScore = localStorage.getItem('gameScore');
 
@@ -123,11 +123,16 @@ function updateScoreDisplay() {
 
 
     function checkWin() {
-      // atualiza células de todas as peças
-      $('.block').each(function () { updatePieceCell($(this)); });
+    // Adicione esta verificação no início
+    if (isTimeUp) {
+        return false;
+    }
 
-      const used = new Map();
-      for (const id in target) {
+    // o resto do seu código de checkWin segue aqui...
+    $('.block').each(function () { updatePieceCell($(this)); });
+
+    const used = new Map();
+    for (const id in target) {
         const $p = $('#' + id);
         if ($p.length === 0) return false;
 
@@ -141,20 +146,19 @@ function updateScoreDisplay() {
         if (!rotationMatches(angle, goal.angle, id)) return false;
 
         if (id === 'parallelogram' && goal.flip !== null) {
-          if ((!!flip) !== goal.flip) return false;
+            if ((!!flip) !== goal.flip) return false;
         }
 
         const key = cell.x + ',' + cell.y;
         if (used.has(key)) return false;
         used.set(key, id);
-      }
-          
-      controleVitoria = true;
-      verificarEExibir();
-      handleVictory()
-      return true;
     }
-
+        
+    controleVitoria = true;
+    verificarEExibir();
+    handleVictory()
+    return true;
+}
 
     $('.block').each(function () {
       const $p = $(this);
@@ -238,7 +242,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 document.addEventListener('DOMContentLoaded', (event) => {
-
     const divTimer = document.getElementById('timer');
     let tempoRestante = 60;
 
@@ -252,6 +255,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 clearInterval(timerPrincipal); 
                 divTimer.textContent = "Tempo esgotado!";
                 divTimer.style.backgroundColor = '#ff6257ff';
+                isTimeUp = true; // Defina como true quando o tempo acabar
             }
            if (controleVitoria){
                clearInterval(timerPrincipal); 
