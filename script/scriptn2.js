@@ -112,9 +112,15 @@ function updateScoreDisplay() {
     const divGanhou = document.getElementById('ganhou');
 
     function verificarEExibir() {
-      if (tempoRestante >= 0){
       divGanhou.classList.add('visivel');}
-  }
+  
+     function updateScoreDisplay() {
+        const scoreElement = document.getElementById('score-display');
+    
+        if (scoreElement) {
+            scoreElement.innerText = score;
+        }
+}
 
     function handleVictory() {
         score += 100;
@@ -124,40 +130,40 @@ function updateScoreDisplay() {
 
     function checkWin() {
     // Adicione esta verificação no início
-    if (isTimeUp) {
-        return false;
-    }
+      if (isTimeUp) {
+          return false;
+      }
 
-    // o resto do seu código de checkWin segue aqui...
-    $('.block').each(function () { updatePieceCell($(this)); });
+      // o resto do seu código de checkWin segue aqui...
+      $('.block').each(function () { updatePieceCell($(this)); });
 
-    const used = new Map();
-    for (const id in target) {
-        const $p = $('#' + id);
-        if ($p.length === 0) return false;
+      const used = new Map();
+      for (const id in target) {
+          const $p = $('#' + id);
+          if ($p.length === 0) return false;
 
-        const goal = target[id];
-        const cell = $p.data('cell');
-        const angle = $p.data('angle') || 0;
-        const flip  = $p.data('flip');
+          const goal = target[id];
+          const cell = $p.data('cell');
+          const angle = $p.data('angle') || 0;
+          const flip  = $p.data('flip');
 
-        if (!cell) return false;
-        if (!(cell.x === goal.cell.x && cell.y === goal.cell.y)) return false;
-        if (!rotationMatches(angle, goal.angle, id)) return false;
+          if (!cell) return false;
+          if (!(cell.x === goal.cell.x && cell.y === goal.cell.y)) return false;
+          if (!rotationMatches(angle, goal.angle, id)) return false;
 
-        if (id === 'parallelogram' && goal.flip !== null) {
-            if ((!!flip) !== goal.flip) return false;
-        }
+          if (id === 'parallelogram' && goal.flip !== null) {
+              if ((!!flip) !== goal.flip) return false;
+          }
 
-        const key = cell.x + ',' + cell.y;
-        if (used.has(key)) return false;
-        used.set(key, id);
-    }
-        
-    controleVitoria = true;
-    verificarEExibir();
-    handleVictory()
-    return true;
+          const key = cell.x + ',' + cell.y;
+          if (used.has(key)) return false;
+          used.set(key, id);
+      }
+          
+      controleVitoria = true;
+      verificarEExibir();
+      handleVictory()
+      return true;
 }
 
     $('.block').each(function () {

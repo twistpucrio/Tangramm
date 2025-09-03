@@ -1,6 +1,6 @@
 #board {
   position: relative;
-  left: 8.5%;
+  left: 9.5%;
    float: left;
     height: 450px;
     width: 670px;
@@ -39,14 +39,14 @@
 #textoTimer{
   display: inline-block;
   font-size: 25pt;
-  font-family: Arial;
+  font-family:'Trebuchet MS';
 
 }
 
 #timer{
   display: inline-block;
   font-size: 25pt;
-  font-family: Arial;
+  font-family:'Trebuchet MS';
 
 }
 
@@ -77,6 +77,8 @@
   border-radius: 10px;
   text-align: center;
   font-size: 20pt;
+  font-family:'Trebuchet MS';
+
 }
 
 #ganhou.visivel {
@@ -97,6 +99,8 @@
   box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
   font-size: 16pt;
   color: rgb(255, 255, 255);
+  font-family:'Trebuchet MS';
+
    }
 
  #score-display {
@@ -104,4 +108,6 @@
   font-weight: bold;
   color: #4CAF50;
   text-align: center;
+  font-family:'Trebuchet MS';
+
  }
