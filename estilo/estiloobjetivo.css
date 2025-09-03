@@ -8,65 +8,49 @@ body, html {
   min-height: 100vh;
 }
 
-/* Menu fixo no topo */
-#menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 70px;
-  background-color: #240046;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* Logo + botões à esquerda */
-  padding: 0.5em 2em;
-  box-sizing: border-box;
-  z-index: 1000;
-  gap: 1em;
-  box-shadow: 0px 8px 20px rgba(0,0,0,0.5);
-}
-
-/* Logo */
 #menu header {
-  margin-right: 2em;
-  flex-shrink: 0;
+  margin-right: 20px;
 }
 
-#menu header img {
-  height: 100px;
-  width: auto;
+#menu #logo {
+  width: 120px;
+  height: auto;
 }
 
-/* Botões do menu */
-.button {
-  display: flex;
-  gap: 10px;
-}
-
-button {
+/* Botões padrão do menu */
+.button2 {
   background-color: white;
   color: #240046;
-  padding: 0.6em 2.5em;
-  min-width: 120px;
+  border: 2px solid;
   border-radius: 8px;
-  font-weight: bold;
+  padding: 12px 16px;
   font-size: 16px;
-  border: 2px solid transparent;
+  font-weight: bold;
   cursor: pointer;
+  transition: 0.3s ease;
+  height: 50px;
+  min-width: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50px;
-  transition: all 0.3s ease;
 }
 
-button:hover {
-  border-width: 4px;
-  transform: scale(1.05);
+.button2:hover {
+  border-width: 6px;
+  background-color: #ffffff;
 }
 
-button:nth-child(1) { border-color: rgb(255, 123, 0);}
+/* Links dentro dos botões */
+.button2 a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 
+/* Bordas coloridas (opcional) */
+#menu button:nth-child(2) { border-color: rgb(255, 123, 0);}        
 
 
 /* Caixa principal do conteúdo */
@@ -76,7 +60,7 @@ button:nth-child(1) { border-color: rgb(255, 123, 0);}
   border-radius: 12px;                     
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   padding: 50px;                           /* aumenta o espaço interno */
-  max-width: 900px;                        /* aumenta a largura */
+  max-width: 700px;                        /* aumenta a largura */
   min-height: 600px;                        /* define altura mínima */
   margin: 120px auto 40px auto;            /* centralizado e afastado do menu */
   text-align: left;
@@ -160,33 +144,3 @@ footer {
   box-shadow: 0px -5px 15px rgba(0,0,0,0.4);
 }
 
-/* Responsivo */
-@media (max-width: 700px) {
-  #menu {
-    flex-direction: column;
-    align-items: flex-start;
-    height: auto;
-    padding: 0.5em 1em;
-  }
-
-  .botoes {
-    flex-wrap: wrap;
-    gap: 5px;
-  }
-
-  .botoes button {
-    width: 100%;
-    font-size: 14px;
-    padding: 0.5em;
-  }
-
-  .caixa-conteudo {
-    padding: 20px;
-    max-width: 95%;
-    margin-top: 120px; /* Mantém distância do menu fixo */
-  }
-
-  h1 {
-    font-size: 1.8rem;
-  }
-}

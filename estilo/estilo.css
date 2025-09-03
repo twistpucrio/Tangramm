@@ -14,33 +14,15 @@ body, html {
 }
 
 
-
-header{
-  height: 50px;
+h1 {
+  font-size: 3rem;
+  margin: 100px auto 10px auto; /* 30px topo, 10px base */
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
 }
 
-/* MENU FIXO ROXO */
-#menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  background-color: #240046; /* Roxo escuro */
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* agora tudo vai para a esquerda */
-  gap: 1.5em;
-  padding: 15px 30px;
-  z-index: 1000;
-  border-bottom: 3px solid #240046;
-}
-
-/* LOGO */
-#menu .logo img {
-  width: 120px;
-  height: auto;
-}
+/* Botões padrão do menu */
 .button2 {
   background-color: white;
   color: #240046;
@@ -71,18 +53,15 @@ header{
   width: 100%;
   height: 100%;
 }
+
 /* Bordas coloridas (opcional) */
-#menu button:nth-child(2) { border-color: rgb(255, 123, 0);} 
+#menu button:nth-child(2) { border-color: rgb(255, 123, 0);}     
 
 
-/* TÍTULO */
-h1 {
-  font-size: 3rem;
-  margin: 100px auto 10px auto; /* 30px topo, 10px base */
-  color: #ffffff;
-  text-align: center;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
-}
+
+
+
+
 
 
 /* Caixas de conteúdo */
