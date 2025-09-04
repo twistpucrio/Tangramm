@@ -52,8 +52,6 @@ body, html {
 /* Bordas coloridas (opcional) */
 #menu button:nth-child(2) { border-color: rgb(255, 123, 0);}        
 
-
-/* Caixa principal do conteúdo */
 /* Caixa principal do conteúdo */
 .caixa-conteudo {
   background: #fff;                        
@@ -62,31 +60,13 @@ body, html {
   padding: 50px;                           /* aumenta o espaço interno */
   max-width: 700px;                        /* aumenta a largura */
   min-height: 100px;                        /* define altura mínima */
-  margin: 40px auto;            /* centralizado e afastado do menu */
+  margin: 40px auto;                        /* centralizado e afastado do menu */
   text-align: left;
   line-height: 1.8;
   color: #240046;
-  font-size: 1.2rem;                        /* aumenta um pouco o texto */
 }
 
 
-
-/* Títulos dentro da caixa */
-.caixa-conteudo h1, 
-.caixa-conteudo h2, 
-.caixa-conteudo h3 {
-  color: #240046;
-  margin-top: 5px;
-  margin-bottom: 15px;
-}
-
-/* Parágrafos dentro da caixa */
-.caixa-conteudo p {
-  color: #333;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 15px;
-}
 
 /* Lista de instruções */
 ul {
@@ -118,14 +98,14 @@ ul li {
   margin-bottom: 15px;
 }
 .caixa-conteudo p {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #000000;
   margin-top: 5px;
   margin-bottom: 15px;
 }
 
 .caixa-conteudo h2 {
-  font-size: 4rem;
+  font-size: 3rem;
   color: #ff3030;
   margin-top: 5px;
   margin-bottom: 15px;

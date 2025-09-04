@@ -1,0 +1,86 @@
+ @media (max-width: 768px){
+   #score-container{
+    margin-top: -300px;
+    margin-left: -600px;
+   }
+
+   #square { 
+    width: 112px; 
+    height: 112px; 
+    background: #fdf900; 
+    transform: rotate(45deg);
+    top: 700px;
+    left: 100px;
+}
+
+#triangle1 { 
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 80px 80px 80px;
+    border-color: transparent transparent #0c6310 transparent; 
+    top: 600px;
+    left: 250px;
+}
+
+#triangle2 { 
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 160px 0 160px 160px;
+    border-color: transparent transparent transparent #fa6d1c;
+    top: 300px;
+}
+
+#triangle3 {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 160px 160px 0 160px;
+    border-color: #ff0000 transparent transparent transparent;
+    top: -50px;
+}
+
+#triangle4 { 
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 160px 160px;
+    border-color: transparent transparent #204daf transparent;
+    top: -230px;
+    left: 300px;
+}
+
+#triangle5 {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 80px 80px 80px 0;
+    border-color: transparent #62e941 transparent transparent;
+    top: -250px;
+    left: 200px;
+}
+
+#parallelogram {
+    width: 240px;
+    height: 80px;
+    background: #ff08ad;
+    position: relative;
+    top: -380px;
+    left: 300px;
+
+    /* Paralelepípedo real, não deformável */
+    clip-path: polygon(33% 0%, 100% 0%, 67% 100%, 0% 100%);
+    transform-origin: center center;
+}
+
+#blockTray {
+    height: 75%;
+    width: 10%;
+    padding: 10px;
+}
+
+}
+
+
+

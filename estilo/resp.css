@@ -31,6 +31,13 @@
     margin: 0 auto;
 }
 
+.botoes{
+    width: 600px;
+}
+
+.botoes button:hover{   width: 150px;
+}
+
 
     .botoes button {
         width: 80%;
@@ -61,7 +68,7 @@
         cursor: pointer;
         transition: 0.3s ease;
         height: 50px;
-        min-width: 120px;
+        min-width: 70px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -162,7 +169,7 @@
     width: 530px;
    }
 
-    }
+}
 
 
 
