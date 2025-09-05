@@ -87,7 +87,7 @@
 #score-container {
   border: 2px solid #333;
   position: relative;
-  left: 40%;
+  left: 35%;
   border-radius: 10px;
   padding: 10px 20px;
   display: inline-block;
@@ -110,8 +110,8 @@
  }
 
  #imagem-tangram{
-  width: 40%;
-  height: 40%;
+  width: 42%;
+  height: 42%;
  }
 
 
